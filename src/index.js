@@ -5,7 +5,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ItemList from "@/components/itemList"
+import ItemList from "@/components/itemList2"
 
 
 

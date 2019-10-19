@@ -11,7 +11,10 @@ module.exports = {
     htmlWebpackPlugin
   ],
   module:{
-    rules:[{test:/\.js|jsx$/,use:'babel-loader',exclude:/node_modules/}]
+    rules:[
+      {test:/\.js|jsx$/,use:'babel-loader',exclude:/node_modules/},
+      {test:/\.css$/,use:["style-loader","css-loader?modules"]}
+    ]
   },
   resolve:{
     extensions:[".js",".jsx",".json"],

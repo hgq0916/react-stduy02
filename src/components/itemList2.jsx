@@ -1,6 +1,11 @@
 import React from 'react';
 
-import ItemCmt from "@/components/itemCmt";
+import ItemCmt from "@/components/itemCmt2";
+
+//导入css样式
+import cssObj from "@/css/itemList.css";
+
+console.log(cssObj);
 
 //创建评论组件
 class ItemList extends React.Component{
@@ -17,10 +22,8 @@ class ItemList extends React.Component{
 
   render(){
     return <div>
-      <h1 style={{color:"red",textAlign:"center",fontWeight:200}}>这是评论列表组件</h1>
+      <h1 className={cssObj.title}>这是评论列表组件</h1>
       {this.state.itemList.map(item=><ItemCmt  key={item.id} {...item}></ItemCmt>)}
-      
-      {/*{this.state.itemList.map(item=>(<div key={item.id}><h1>评论人：{item.name}</h1><h3>评论内容：{item.content}</h3></div>))} */}
     </div>
   }
 }
