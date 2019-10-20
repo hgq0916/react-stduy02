@@ -1,0 +1,9 @@
+:local(.title){
+  color:red;
+  text-align: center;
+}
+
+/* 使用gogal避免class被模块化 */
+:global(.test){
+  font-style: italic;
+}

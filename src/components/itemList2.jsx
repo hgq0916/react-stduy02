@@ -3,9 +3,12 @@ import React from 'react';
 import ItemCmt from "@/components/itemCmt2";
 
 //导入css样式
-import cssObj from "@/css/itemList.css";
+import cssObj from "@/css/itemList.scss";
 
-console.log(cssObj);
+//导入第三方的css样式
+import bootCss from "bootstrap/dist/css/bootstrap.css";
+
+console.log("bootCss:",bootCss);
 
 //创建评论组件
 class ItemList extends React.Component{
@@ -22,7 +25,10 @@ class ItemList extends React.Component{
 
   render(){
     return <div>
-      <h1 className={cssObj.title}>这是评论列表组件</h1>
+      <button className={["btn","btn-primary"].join(" ")}>按钮</button>
+      <div className="panel panel-primary"></div>
+      {/* <h1 className={cssObj.title+" "+cssObj.test}>这是评论列表组件</h1> */}
+      <h1 className={[cssObj.title,"test"].join(" ")}>这是评论列表组件</h1>
       {this.state.itemList.map(item=><ItemCmt  key={item.id} {...item}></ItemCmt>)}
     </div>
   }

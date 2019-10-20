@@ -1,7 +1,7 @@
 import React from 'react';
 
 //导入css
-import cssObj from "@/css/itemCmt.css";
+import cssObj from "@/css/itemCmt.scss";
 
 console.log(cssObj);
 

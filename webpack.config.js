@@ -18,14 +18,30 @@ module.exports = {
           loader:"style-loader"
         },
         {
-          loader:"css-loader",
-          options:{
-            modules:{
-              localIdentName:"[path][name]-[local]-[hash:5]"
-            }
-          }
+          loader:"css-loader"
         }
       ]
+    },
+    {
+      test:/\.ttf|woff2|woff|eot|svg/,
+      use:["url-loader"]
+    },
+    {
+      test:/\.scss/,
+      use:[{
+        loader:"style-loader"
+      },
+      {
+        loader:"css-loader",
+        options:{
+          modules:{
+            localIdentName:"[path][name]-[local]-[hash:5]"
+          }
+        }
+      },
+        {
+        loader:"sass-loader"
+      }]
     }
   ]
 },
