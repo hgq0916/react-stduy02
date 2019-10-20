@@ -3,6 +3,8 @@ import React from 'react';
 //导入css
 import cssObj from "@/css/itemCmt.css";
 
+console.log(cssObj);
+
 //创建评论子组件
 function ItemCmt(props) {
   return (
