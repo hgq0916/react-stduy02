@@ -6,3 +6,4 @@
 cnpm i url-loader file-loader -D
 #### 5.解决scss无法加载的问题。
 cnpm i sass-loader node-sass -D
+#### 6.事件绑定，refs获取dom元素引用
